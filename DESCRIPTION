@@ -1,6 +1,6 @@
 Package: bees
 Title: Helper R Functions to Banestes
-Version: 0.0.0.9000
+Version: 0.0.1.9000
 Authors@R: 
     person("Alberson", "Miranda", , "albersonmiranda@banestes.com.br", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
