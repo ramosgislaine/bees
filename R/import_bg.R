@@ -159,7 +159,59 @@ import_bg = function(
       grau_instrucao = readr::col_character()
     )
   } else {
-    # TODO: especificacoes arquivo PJ
+     # especificacoes arquivo PJ
+    colunas = c(
+      "tp_reg", "tp_cli", "cpfcnpj",
+      "titularidade_cnpj", "razao_social", "nome_fantasia",
+      "class_cli", "cid_origem_cadastro", "canal_origem_cadastro",
+      "cid_atual_cadastro", "canal_atual_cadastro", "cid_resp_doc",
+      "dt_cadastro", "dt_vencimento", "cod_banco", "ag_banco",
+      "dt_sis_fin","id_comprovacao_doc", "porte_class_sfb",
+      "porte_class_rfb", "cod_ramo", "digito_ramo", "cod_subclass",
+      "dt_inicio_atividade","cod_natureza_juridica", "dig_natureza_juridica",
+      "dt_constituicao","faturamento", "dt_inicio_faturamento",
+      "dt_fim_faturamento", "faturamento_anual",
+      "sinal_patrimonio_liquido", "patrimonio_liquido", "doc_contabil",
+      "dt_doc_contabil", "n_registro", "dt_registro", "descricao_orgao",
+      "capital_social_registrado", "capital_social_integralizado",
+      "forma_tributacao", "class_us_person", "percentual_capital_br",
+      "percentual_capital_estrangeiro", "id_inter_global", "class_empresa",
+      "part_grupo_economico", "cod_grupo_economico", "logradouro_comercial",
+      "numero_logradouro_comercial", "complemento_comercial", "bairro_comercial",
+      "cep_comercial", "descricao_local", "uf", "ddd", "telefone", "ramal",
+      "ddd_cel_cliente", "tel_cel_cliente", "email",
+      "id_imoveis", "id_veiculos", "id_seguro", "dt_ult_score",
+      "hr_ult_score", "modelo", "valor_score_sistema", "nivel_risco_sistema",
+      "class_sistema", "valor_score_final", "nivel_risco_final", "class_final",
+      "nivel_risco_comite", "class_comite", "saldo_contabil",
+      "dt_ultima_alteracao")
+
+    larguras = c(
+      1, 1, 14, 1, 100, 30, 2, 4, 1, 4, 1, 4, 8, 8, 3, 4, 8, 1, 1, 1, 4, 1,
+      2, 8, 3, 1, 8, 14, 8, 8, 14, 1, 14, 1, 8, 15, 8, 30, 14, 14, 1, 1, 3, 3,
+      19, 1, 1, 8, 30, 6, 30, 20, 8, 30, 2, 4, 8, 4, 4, 10, 40, 1, 1, 1, 8, 6,
+      2, 10, 2, 2, 10, 2, 2, 2, 2, 17, 8)
+
+    col_types = readr::cols(
+      patrimonio_liquido = readr::col_double(),
+      dt_cadastro = readr::col_date("%Y%m%d"),
+      dt_vencimento = readr::col_date("%Y%m%d"),
+      dt_sis_fin = readr::col_date("%Y%m%d"),
+      dt_doc_contabil = readr::col_date("%Y%m%d"),
+      dt_ult_score = readr::col_date("%Y%m%d"),
+      dt_ultima_alteracao = readr::col_date("%Y%m%d"),
+      dt_registro = readr::col_date("%Y%m%d"),
+      dt_doc_contabil = readr::col_date("%Y%m%d"),
+      dt_constituicao = readr::col_date("%Y%m%d"),
+      dt_inicio_faturamento = readr::col_date("%Y%m%d"),
+      dt_fim_faturamento = readr::col_date("%Y%m%d"),
+      faturamento_anual = readr::col_double(),
+      dt_inicio_atividade = readr::col_date("%Y%m%d"),
+      saldo_contabil = readr::col_double(),
+      capital_social_registrado = readr::col_double(),
+      capital_social_integralizado = readr::col_double(),
+
+    )
   }
 
   # importar arquivo para o R via {readr}
@@ -200,6 +252,8 @@ import_bg = function(
   } else {
 
     data
-  }
 
+    }
 }
+
+
