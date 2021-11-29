@@ -20,7 +20,7 @@ Se TRUE, entao o arquivo sera importado para o DuckDB.}
 \item{tabela}{String. Nome da tabela a ser criada no DuckDB.}
 }
 \description{
-Importa o arquivo GCRED – CFFAC8 para o R ou para o DuckDB.
+Importa o arquivo c8 para o R ou para o DuckDB.
 }
 \details{
 Se for importar apenas para o R, lembre-se de nomear um objeto para
@@ -36,7 +36,7 @@ data = import_c8("\\\\path\\\\to\\\\file.txt")
 import_c8(
  "\\\\path\\\\to\\\\file.txt",
  duckdb = TRUE,
- db = "\\\\path\\\\to\\\\duck.db"),
+ db = "\\\\path\\\\to\\\\duck.db")
 }
 
 }
