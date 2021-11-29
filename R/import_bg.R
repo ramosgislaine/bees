@@ -87,7 +87,7 @@ import_bg = function(
   # especificacoes arquivo PF
   if (tipo == "pf") {
     colunas = c(
-      "tp_reg", "tp_cli", "cpf",
+      "tp_reg", "tp_cli", "cpfcnpj",
       "titularidade", "class_cliente", "nome",
       "nome_social", "ano_obito", "cid_origem",
       "canal_origem_cadastro", "cid_atual_cadastro", "canal_atual_cadastro",
@@ -134,9 +134,9 @@ import_bg = function(
       1, 1, 14, 1, 2, 100, 150, 4, 4, 1, 4, 1, 4, 8, 8, 3, 4, 8, 1, 8, 30, 2, 1,
       4, 40, 40, 1, 15, 10, 2, 8, 1, 1, 14, 100, 2, 1, 1, 30, 6, 8, 60, 14, 30,
       4, 8, 11, 1, 8, 1, 1, 11, 1, 8, 30, 6, 30, 20, 8, 30, 2, 4, 8, 4, 10, 40,
-      1, 1, 1, 12, 8, 6, 2, 10, 2, 2, 10, 2, 2, 17, 1, 1, 4, 4, 4, 4, 4, 25, 4,
-      25, 4, 25, 4, 25, 4, 5, 100, 50, 50, 50, 10, 1, 1, 14, 100, 30, 6, 30, 20,
-      8, 30, 2, 8
+      1, 1, 1, 12, 8, 6, 2, 10, 2, 2, 10, 2, 2, 17, 1, 1, 4, 4, 4, 4, 4, 11,
+      4, 11, 4, 11, 4, 11, 4, 5, 100, 50, 50, 50, 10, 1, 1, 14, 100, 30, 6, 30,
+      20, 8, 30, 2, 8
     )
 
     col_types = readr::cols(
@@ -209,7 +209,7 @@ import_bg = function(
       dt_inicio_atividade = readr::col_date("%Y%m%d"),
       saldo_contabil = readr::col_double(),
       capital_social_registrado = readr::col_double(),
-      capital_social_integralizado = readr::col_double(),
+      capital_social_integralizado = readr::col_double()
 
     )
   }
