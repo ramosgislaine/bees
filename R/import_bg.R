@@ -166,10 +166,10 @@ import_bg = function(
       "class_cli", "cid_origem_cadastro", "canal_origem_cadastro",
       "cid_atual_cadastro", "canal_atual_cadastro", "cid_resp_doc",
       "dt_cadastro", "dt_vencimento", "cod_banco", "ag_banco",
-      "dt_sis_fin","id_comprovacao_doc", "porte_class_sfb",
+      "dt_sis_fin", "id_comprovacao_doc", "porte_class_sfb",
       "porte_class_rfb", "cod_ramo", "digito_ramo", "cod_subclass",
-      "dt_inicio_atividade","cod_natureza_juridica", "dig_natureza_juridica",
-      "dt_constituicao","faturamento", "dt_inicio_faturamento",
+      "dt_inicio_atividade", "cod_natureza_juridica", "dig_natureza_juridica",
+      "dt_constituicao", "faturamento", "dt_inicio_faturamento",
       "dt_fim_faturamento", "faturamento_anual",
       "sinal_patrimonio_liquido", "patrimonio_liquido", "doc_contabil",
       "dt_doc_contabil", "n_registro", "dt_registro", "descricao_orgao",
@@ -177,8 +177,9 @@ import_bg = function(
       "forma_tributacao", "class_us_person", "percentual_capital_br",
       "percentual_capital_estrangeiro", "id_inter_global", "class_empresa",
       "part_grupo_economico", "cod_grupo_economico", "logradouro_comercial",
-      "numero_logradouro_comercial", "complemento_comercial", "bairro_comercial",
-      "cep_comercial", "descricao_local", "uf", "ddd", "telefone", "ramal",
+      "numero_logradouro_comercial", "complemento_comercial",
+      "bairro_comercial", "cep_comercial", "descricao_local",
+      "uf", "ddd", "telefone", "ramal",
       "ddd_cel_cliente", "tel_cel_cliente", "email",
       "id_imoveis", "id_veiculos", "id_seguro", "dt_ult_score",
       "hr_ult_score", "modelo", "valor_score_sistema", "nivel_risco_sistema",
@@ -255,5 +256,3 @@ import_bg = function(
 
     }
 }
-
-
