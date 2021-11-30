@@ -119,7 +119,7 @@ import_dco = function(
     data = readr::read_fwf(
       caminho,
       readr::fwf_widths(larguras,
-                        colunas,),
+                        colunas, ),
       col_types = col_types,
       skip = 1
     )
@@ -149,5 +149,3 @@ import_dco = function(
   }
 
 }
-
-

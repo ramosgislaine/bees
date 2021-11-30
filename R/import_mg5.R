@@ -77,10 +77,10 @@ import_mg5 = function(
   # especificacoes arquivo
   colunas = c(
   "ano_pn", "n_pn", "dt_efetivacao", "produto_renegociacao",
-  "sub_produto_renegociacao", "contrato_renegociacao","produto_renegociado",
+  "sub_produto_renegociacao", "contrato_renegociacao", "produto_renegociado",
   "sub_produto_renegociado", "contrato_renegociado", "valor_efetivamente_pg",
   "situacao_contrato", "valor_entrada", "class_contrato", "id_info_operacional",
-  "valor_contabil", "valor_de_RA","saldo_contabil", "matrangariador")
+  "valor_contabil", "valor_de_RA", "saldo_contabil", "matrangariador")
 
 
 
@@ -103,7 +103,7 @@ import_mg5 = function(
     data = readr::read_fwf(
       caminho,
       readr::fwf_widths(larguras,
-                        colunas,),
+                        colunas, ),
       col_types = col_types,
       skip = 1
     )
@@ -133,5 +133,3 @@ import_mg5 = function(
   }
 
 }
-
-

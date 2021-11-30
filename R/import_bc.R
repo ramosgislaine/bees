@@ -78,8 +78,8 @@ import_bc = function(
    "cod_advertencia", "cod_cliente", "nome", "cpf/cnpj_2",
    "n_doc_origem_advertencia", "cod_produto", "cod_sub_produto",
    "dt_fim_advertencia", "id_grau_responsabilidade",
-   "dt_controle_processamento","cod_interno_dependencia",
-   "cod_empresa_externa_informante","qtd_ocorrencia_advertencia",
+   "dt_controle_processamento", "cod_interno_dependencia",
+   "cod_empresa_externa_informante", "qtd_ocorrencia_advertencia",
    "dt_primeira_ocorrencia_advertencia", "dt_ult_ocorrencia_advertencia"
      )
 
@@ -138,5 +138,3 @@ import_bc = function(
 
   }
 }
-
-
