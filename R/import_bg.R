@@ -7,24 +7,24 @@
 #' @export
 #'
 #' @param caminho
-#'  String. O caminho do arquivo a ser importado, incluindo a
-#'  extensao (.txt).
+#' String. O caminho do arquivo a ser importado, incluindo a
+#' extensao (.txt).
 #' @param tipo
-#'  String. "pf" para pessoa fisica ou "pj" para pessoa juridica.
+#' String. "pf" para pessoa fisica ou "pj" para pessoa juridica.
 #' @param metodo
-#'  String. "readr" ou "vroom".
+#' String. "readr" ou "vroom".
 #' @param duckdb
-#'  Logical.
-#'  Se TRUE, entao o arquivo sera importado para o DuckDB.
+#' Logical.
+#' Se TRUE, entao o arquivo sera importado para o DuckDB.
 #' @param db
-#'  String. Se duckdb = TRUE, o caminho do arquivo do banco de dados.
+#' String. Se duckdb = TRUE, o caminho do arquivo do banco de dados.
 #' @param tabela
-#'  String. Nome da tabela a ser criada no DuckDB.
+#' String. Nome da tabela a ser criada no DuckDB.
 #'
 #' @details
-#'  Se for importar apenas para o R, lembre-se de nomear um objeto para
-#'  o resultado da funcao. Caso for importar para o DuckDB, nao e necessario
-#'  criar um objeto. Note que a tabela sera sobrescrita se ja existir.
+#' Se for importar apenas para o R, lembre-se de nomear um objeto para
+#' o resultado da funcao. Caso for importar para o DuckDB, nao e necessario
+#' criar um objeto. Note que a tabela sera sobrescrita se ja existir.
 #'
 #' @examples
 #' \dontrun{
@@ -221,7 +221,7 @@ import_bg = function(
       caminho,
       readr::fwf_widths(
         larguras,
-        colunas,
+        colunas
       ),
       col_types = col_types,
       skip = 1
@@ -240,6 +240,12 @@ import_bg = function(
       skip = 1
     )
   }
+
+  # limpando duplicatas
+  data = data[!duplicated(data$cpfcnpj), ]
+
+  # corrigir caracter malformado
+  data[data$cpfcnpj == "00042843464587", ]$logradouro_num = "SN"
 
   # criar tabela no DuckDB
   if (duckdb == TRUE) {
