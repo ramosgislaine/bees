@@ -245,7 +245,9 @@ import_bg = function(
   data = data[!duplicated(data$cpfcnpj), ]
 
   # corrigir caracter malformado
-  data[data$cpfcnpj == "00042843464587", ]$logradouro_num = "SN"
+  data = within(data, {
+    logradouro_num = ifelse(cpfcnpj == "00042843464587", "SN", logradouro_num)
+  })
 
   # criar tabela no DuckDB
   if (duckdb == TRUE) {
