@@ -3,6 +3,7 @@
 export(import_bc)
 export(import_bg)
 export(import_c8)
+export(import_cdb)
 export(import_dco)
 export(import_gco)
 export(import_got)
