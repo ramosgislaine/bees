@@ -78,7 +78,7 @@ import_got = function(
     colunas = c(
       "id_empresa", "cod_dependencia_interno", "dt_inicio_vigencia",
       "dt_fim_vigencia", "tp_dependencia", "digito_cid",
-      "descrição_orgao", "descricao_resumida_orgao", "logradouro",
+      "descricao_orgao", "descricao_resumida_orgao", "logradouro",
       "complemento_endereco", "bairro", "municipio", "uf", "cep",
       "complemento_cep", "ddd", "telefone", "telefone_2", "telefone_3",
       "telefone_4", "telefone_5", "item_tabelado_1", "item_tabelado_2",
@@ -93,7 +93,7 @@ import_got = function(
       "classe_ag", "1_acatamento_2_novas_op_credito", "regiao_fiscal",
       "id_cid_cense", "status_ag_pioneira",
       "praca_compensacao", "id_orgao_adm", "id_orgao_controle",
-      "id_gerencia_regional", "nivel_automoção_dependencia",
+      "id_gerencia_regional", "nivel_automocao_dependencia",
       "emissao_listao_papel", "sequencia_emissao_subcentro",
       "n_vias_relatorio_saldo", "agencia_contabil_subordinada",
       "codigo_localidade", "descricao_resumida_orgao_2",

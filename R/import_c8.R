@@ -85,7 +85,7 @@ import_c8 = function(
     "prazo_total_dias", "total_dias_atraso", "situacao_atraso",
     "produto", "subproduto", "saldo_devedor_vencido", "cpfcnpj",
     "dt_transf_contabil", "dt_inclusao_contrato", "valor_cred_aberto",
-    "class_contrato", "valor_aplicação", "empresa", "cod_beneficio",
+    "class_contrato", "valor_aplicacao", "empresa", "cod_beneficio",
     "tipo_cliente", "dt_nascimento", "sexo", "estado_civil", "profissao",
     "debito_conta", "valor_rendas_juros_mes", "cid",
     "valor_prestacao_original", "motivo_descaracterizacao",

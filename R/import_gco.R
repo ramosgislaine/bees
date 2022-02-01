@@ -32,29 +32,30 @@
 #'
 #'
 import_gco = function(caminho,
-                      mysql = FALSE,
+                      duckdb = FALSE,
+                      db,
                       tabela,
                       metodo = c("vroom", "readr")) {
 
   # evaluate arg tabela
-  if (mysql == TRUE && is.null(tabela)) {
+  if (duckdb == TRUE && is.null(tabela)) {
     stop("tabela deve ser informada")
   }
 
   # evaluate arg host
-  if (mysql == TRUE && is.null(user)) {
+  if (duckdb == TRUE && is.null(user)) {
     stop("host deve ser informado")
   }
 
   # evaluate arg user
-  if (mysql == TRUE && is.null(user)) {
+  if (duckdb == TRUE && is.null(user)) {
     stop("user deve ser informado")
   }
 
   # evaluate arg metodo
   match.arg(metodo)
 
-  # conexao com MySQL
+  # conexao com DuckDB
   if (duckdb == TRUE) {
     DBI::dbConnect(duckdb::duckdb())
   }
@@ -157,8 +158,8 @@ import_gco = function(caminho,
     )
   }
 
-  # criar tabela no MySQL
-  if (mysql == TRUE) {
+  # criar tabela no DuckDB
+  if (duckdb == TRUE) {
 
     # dropar tabela
     DBI::dbSendQuery(con, paste("DROP TABLE IF EXISTS", tabela))

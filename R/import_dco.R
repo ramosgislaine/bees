@@ -76,14 +76,14 @@ import_dco = function(
 
   # especificacoes arquivo
   colunas = c(
-    "conta", "poupança", "id_pj_pf", "id_conta_gov", "cpfcgc_titular",
+    "conta", "poupanca", "id_pj_pf", "id_conta_gov", "cpfcgc_titular",
     "cod_faixa_conta", "cod_dependencia", "nome_titular",
     "desc_resumida_orgao", "saldo_fim_dia", "conta_contabil_faixa",
     "conta_contabil_transferencia",
     "conta_cosif_deposito",
     "conta_cosif_transferencia", "dt_abertura_conta",
     "dt_ult_mov_conta", "n_modalidade",
-    "dia_cobrança_cesta_tarifa", "id_situação", "cod_situacao_conta",
+    "dia_cobranca_cesta_tarifa", "id_situacao", "cod_situacao_conta",
     "tp_abertura_conta", "id_conta_bloqueada", "ind_aplicacao_automatica",
     "ind_resgate_automatico", "ind_emissao_aplicacoes_extra",
     "ind_bloq_movto_via_automaca", "ind_permissao_deposito",
